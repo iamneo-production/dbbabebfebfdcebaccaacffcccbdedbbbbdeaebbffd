@@ -11,5 +11,4 @@ function getTopThree(studentMarks = []) {
   const [first = null, second = null, third = null] = studentMarks;
   return [first, second, third].sort((a, b) => b - a);
 }
-
 export { getUserIpDetails, getTopThree };
