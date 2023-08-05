@@ -1,11 +1,15 @@
-function getUserIpDetails(userResponse = {}) {
-  const { userName, userIp ='0.0.0.0' } = userResponse;
-  return [username,userIp];
-}
-function getTopThree(StudentMarks=[]) {
-  const [first=null,second=null,third=null, ...rest]=student
-  retuen [first,second,third].sort();
-}
-export {getUserIpDetails,getTopThree}
+// File: reactapp/src/functions/destructuring.js
 
-  
+// Function to get user IP and name using destructuring
+function getUserIpDetails(userResponse = {}) {
+  const { userName, userIp = '0.0.0.0' } = userResponse;
+  return [userName, userIp];
+}
+
+// Function to get top three student marks using destructuring
+function getTopThree(studentMarks = []) {
+  const [first = null, second = null, third = null] = studentMarks;
+  return [first, second, third].sort((a, b) => b - a);
+}
+
+export { getUserIpDetails, getTopThree };
